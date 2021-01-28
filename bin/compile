@@ -14,6 +14,7 @@ shopt -s dotglob
 # - https://packages.ubuntu.com/focal/amd64/mariadb-client-10.3/download
 PKG="mariadb-client-10.3_10.3.25-0ubuntu0.20.04.1_amd64.deb"
 PKG2="mariadb-client-core-10.3_10.3.25-0ubuntu0.20.04.1_amd64.deb"
+PKG3="libreadline5_5.2+dfsg-3build3_amd64.deb"
 BUILD_DIR=$1
 CACHE_DIR=$2
 ENV_DIR=$3
@@ -23,6 +24,7 @@ echo "-----> MySQL Install $PKG"
 mkdir -p $BUILD_DIR/.heroku/mysql
 dpkg -x $CRT/../deb/$PKG $BUILD_DIR/.heroku/mysql
 dpkg -x $CRT/../deb/$PKG2 $BUILD_DIR/.heroku/mysql
+dpkg -x $CRT/../deb/$PKG3 $BUILD_DIR/.heroku/mysql
 
 echo "-----> MySQL set PATH"
 mkdir -p $BUILD_DIR/.profile.d
