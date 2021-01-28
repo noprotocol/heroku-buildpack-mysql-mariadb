@@ -13,6 +13,7 @@ shopt -s dotglob
 # - http://security.ubuntu.com/ubuntu/pool/main/m/mysql-8.0/ for MYSQL
 # - https://packages.ubuntu.com/focal/amd64/mariadb-client-10.3/download
 PKG="mariadb-client-10.3_10.3.25-0ubuntu0.20.04.1_amd64.deb"
+PKG2="mariadb-client-core-10.3_10.3.25-0ubuntu0.20.04.1_amd64.deb"
 BUILD_DIR=$1
 CACHE_DIR=$2
 ENV_DIR=$3
@@ -21,6 +22,7 @@ CRT="$( cd "$(dirname "$0")" >/dev/null 2>&1 ; pwd -P )"
 echo "-----> MySQL Install $PKG"
 mkdir -p $BUILD_DIR/.heroku/mysql
 dpkg -x $CRT/../deb/$PKG $BUILD_DIR/.heroku/mysql
+dpkg -x $CRT/../deb/$PKG2 $BUILD_DIR/.heroku/mysql
 
 echo "-----> MySQL set PATH"
 mkdir -p $BUILD_DIR/.profile.d
