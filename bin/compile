@@ -30,6 +30,7 @@ echo "-----> MySQL set PATH"
 mkdir -p $BUILD_DIR/.profile.d
 cat > $BUILD_DIR/.profile.d/mysql.sh <<'EOF'
 export PATH="/app/.heroku/mysql/usr/bin:$PATH"
+export LD_LIBRARY_PATH="$LD_LIBRARY_PATH:/app/.heroku/mysql/lib/x86_64-linux-gnu"
 EOF
 chmod +x $BUILD_DIR/.profile.d/mysql.sh
 
