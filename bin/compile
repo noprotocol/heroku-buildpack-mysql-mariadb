@@ -9,9 +9,12 @@ set -eu
 # move hidden files too, just in case
 shopt -s dotglob
 
-# Download packages at:
+# Download packages for Mysql at:
 # - http://security.ubuntu.com/ubuntu/pool/main/m/mysql-8.0/ for MYSQL
-# - https://packages.ubuntu.com/focal/amd64/mariadb-client-10.3/download
+# Download packages for MariaDB at:
+# - https://ubuntu.pkgs.org/20.04/ubuntu-updates-universe-amd64/mariadb-client-10.3_10.3.25-0ubuntu0.20.04.1_amd64.deb.html
+# - https://ubuntu.pkgs.org/20.04/ubuntu-updates-universe-amd64/mariadb-client-core-10.3_10.3.25-0ubuntu0.20.04.1_amd64.deb.html
+# - https://ubuntu.pkgs.org/20.04/ubuntu-main-amd64/libreadline5_5.2+dfsg-3build3_amd64.deb.html
 PKG="mariadb-client-10.3_10.3.25-0ubuntu0.20.04.1_amd64.deb"
 PKG2="mariadb-client-core-10.3_10.3.25-0ubuntu0.20.04.1_amd64.deb"
 PKG3="libreadline5_5.2+dfsg-3build3_amd64.deb"
@@ -35,5 +38,3 @@ EOF
 chmod +x $BUILD_DIR/.profile.d/mysql.sh
 
 echo "-----> MySQL Done 🎉"
-
-
