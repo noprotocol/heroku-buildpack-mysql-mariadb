@@ -12,11 +12,11 @@ shopt -s dotglob
 # Download packages for Mysql at:
 # - http://security.ubuntu.com/ubuntu/pool/main/m/mysql-8.0/ for MYSQL
 # Download packages for MariaDB at:
-# - https://ubuntu.pkgs.org/20.04/ubuntu-updates-universe-amd64/mariadb-client-10.3_10.3.25-0ubuntu0.20.04.1_amd64.deb.html
-# - https://ubuntu.pkgs.org/20.04/ubuntu-updates-universe-amd64/mariadb-client-core-10.3_10.3.25-0ubuntu0.20.04.1_amd64.deb.html
+# - https://ubuntu.pkgs.org/22.04/ubuntu-updates-universe-amd64/mariadb-client-10.6_10.6.7-2ubuntu1.1_amd64.deb.html
+# - https://ubuntu.pkgs.org/22.04/ubuntu-updates-universe-amd64/mariadb-client-core-10.6_10.6.7-2ubuntu1.1_amd64.deb.html
 # - https://ubuntu.pkgs.org/20.04/ubuntu-main-amd64/libreadline5_5.2+dfsg-3build3_amd64.deb.html
-PKG="mariadb-client-10.3_10.3.25-0ubuntu0.20.04.1_amd64.deb"
-PKG2="mariadb-client-core-10.3_10.3.25-0ubuntu0.20.04.1_amd64.deb"
+PKG="mariadb-client-10.6_10.6.7-2ubuntu1.1_amd64.deb"
+PKG2="mariadb-client-core-10.6_10.6.7-2ubuntu1.1_amd64.deb"
 PKG3="libreadline5_5.2+dfsg-3build3_amd64.deb"
 BUILD_DIR=$1
 CACHE_DIR=$2

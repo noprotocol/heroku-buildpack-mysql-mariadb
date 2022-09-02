@@ -1,4 +1,4 @@
 #!/bin/bash
 
-echo "MySQL Client"
+echo "MySQL / MariaDB Client"
 exit 0
